@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dist GR - Distribuidora</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Dist GR</div>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Tu Distribuidora de Confianza</h1>
+        <p>Hacé tu pedido online y terminalo por WhatsApp</p>
+    </section>
+
+    <main class="products-container">
+        <div class="product-card" data-id="1" data-name="Pack Agua Mineral 2L (6 un)" data-price="4500">
+            <div class="product-img">📦</div>
+            <h3>Pack Agua Mineral 2L (6 un)</h3>
+            <p class="price">$4.500</p>
+            <button class="btn-add" onclick="addToCart(1)">Añadir al carrito</button>
+        </div>
+
+        <div class="product-card" data-id="2" data-name="Caja de Galletitas Varias" data-price="8200">
+            <div class="product-img">📦</div>
+            <h3>Caja de Galletitas Varias</h3>
+            <p class="price">$8.200</p>
+            <button class="btn-add" onclick="addToCart(2)">Añadir al carrito</button>
+        </div>
+
+        <div class="product-card" data-id="3" data-name="Pack Leche Entera 1L (12 un)" data-price="12000">
+            <div class="product-img">📦</div>
+            <h3>Pack Leche Entera 1L (12 un)</h3>
+            <p class="price">$12.000</p>
+            <button class="btn-add" onclick="addToCart(3)">Añadir al carrito</button>
+        </div>
+
+        <div class="product-card" data-id="4" data-name="Aceite Girasol 1.5L (15 un)" data-price="22500">
+            <div class="product-img">📦</div>
+            <h3>Aceite Girasol 1.5L (15 un)</h3>
+            <p class="price">$22.500</p>
+            <button class="btn-add" onclick="addToCart(4)">Añadir al carrito</button>
+        </div>
+    </main>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Tu Pedido</h2>
+            <button class="close-btn" onclick="toggleCart()">&times;</button>
+        </div>
+        
+        <div id="cart-items" class="cart-items">
+            <p class="empty-cart">El carrito está vacío</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0</span>
+            </div>
+            <button class="btn-checkout" onclick="sendWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Finalizar pedido
+            </button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
